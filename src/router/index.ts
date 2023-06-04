@@ -1,6 +1,7 @@
 import HomePage from '@/pages/HomePage/index.vue'
 import LoginPage from '@/pages/Login/index.vue'
 import RegisterPage from '@/pages/Register/index.vue'
+import SettingsPage from '@/pages/Settings/index.vue'
 
 import {
   createRouter,
@@ -45,6 +46,14 @@ export const routes: RouteRecordRaw[] = [
     component: RegisterPage,
     meta: {
       layout: 'Auth'
+    }
+  },
+  {
+    name: 'settings',
+    path: '/settings',
+    component: SettingsPage,
+    meta: {
+      layout: 'Default'
     }
   }
 

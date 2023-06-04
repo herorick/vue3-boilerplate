@@ -1,6 +1,6 @@
 <template>
   <div>
-    <label :for="props.id" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{
+    <label v-if="title" :for="props.id" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{
       props.title
     }}</label>
     <input
@@ -22,7 +22,7 @@ export interface Props {
   required?: boolean
   placeholder?: string
   modelValue?: any
-  title: string
+  title?: string
   id: string
 }
 

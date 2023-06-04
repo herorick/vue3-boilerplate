@@ -26,13 +26,19 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import AppButton from '@/components/AppButton.vue'
 import AppInput from '@/components/AppInput.vue'
 import AppLink from '@/components/AppLink.vue';
 import { api } from '@/services';
 import { isFetchError } from '@/services';
+import { useUserStore } from '@/stores/user';
 import { ref, reactive } from 'vue'
+import {routerPush} from "@/router"
+
+
+const { updateUser } = useUserStore()
+
 
 const errors = ref()
 const form = reactive({
